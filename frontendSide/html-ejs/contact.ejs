@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+		<title>MrFox Styles | <%= title %></title>
+		<!-- icon -->
+		<link
+			rel="icon"
+			href="img/header/favicon.ico"
+			type="image/x-icon"
+			sizes="32x32"
+		/>
+	</head>
+
+	<body>
+		<!-- Lorem ipsum
+		! Lorem ipsum coloe
+		TODO You should to something shift + alt + t -- Translate text
+		? Lorem ipsum bla albal labla ===== cmd + alt + 9 eCSStractor
+	-->
+		<div class="wrapper">
+			<%- include('./partials/header.ejs') %>
+			<main class="mainPage">
+				<section class="mainPage__card card">
+					<div class="card__container">
+						<div class="card__title">Koszyk</div>
+						<div class="card__numberItem">
+							<span class="quantityBag">0</span>
+							produkty/-ow
+						</div>
+						<div class="card__subtitle">Dodano do koszyka</div>
+						<div class="card__body">
+							<div class="card__items">
+								<ul class="card__list"></ul>
+							</div>
+							<div class="card__total">
+								<div class="card__totalPrice">
+									<span>Suma:</span>
+									<span class="suma">0 zl</span>
+								</div>
+								<div class="card__buttons">
+									<button class="close-bag" type="button">
+										Kontynuuj Zakupy
+									</button>
+									<button
+										onclick="location.href='review'"
+										class="review-order"
+										type="button"
+									>
+										Zobacz Zawartos Koszyka
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="mainPage__getintouch getintouch getintouch__contact">
+					<div class="getintouch__container _container">
+						<div class="getintouch__header header-block">
+							<div class="header-block__title">Skontaktuj się z nami</div>
+							<div class="header-block__text">
+								W razie pytań lub sugestii - codziennie jesteśmy do Państwa
+								dyspozycji
+							</div>
+						</div>
+						<!-- <div class="getintouch__body"> -->
+						<div class="getintouch__items">
+							<div class="getintouch__item item-getintouch">
+								<div class="item-getintouch__icon">
+									<img src="img/inTouch/phone.svg" alt="phone" />
+								</div>
+								<div class="item-getintouch__emails">
+									<a
+										href="mailto:atynnyi1@stu.vistula.edu.pl"
+										class="item-getintouch__email"
+										target="_blank"
+										>Tynnyi Andrii</a
+									>
+									<a
+										href="tel:+4845391820"
+										class="item-getintouch__email"
+										target="_blank"
+										>+48 453 491 820</a
+									>
+								</div>
+								<a
+									href="tel:+4845391820"
+									class="item-getintouch__button"
+									target="_blank"
+									>Zadzwoń</a
+								>
+							</div>
+							<div
+								class="getintouch__item item-getintouch item-getintouch_active"
+							>
+								<div class="item-getintouch__icon">
+									<img
+										src="img/inTouch/map.svg"
+										class="dark__img"
+										alt="location"
+									/>
+								</div>
+								<div class="item-getintouch__emails">
+									<a
+										href="https://www.google.com/maps/place/Университет+Вистула/@52.1552796,21.0356324,14z/data=!4m6!3m5!1s0x4719328f89315b6d:0x56321377b41fea8!8m2!3d52.1588131!4d21.0343467!16s%2Fm%2F0c40fx1"
+										class="item-getintouch__email"
+										target="_blank"
+										>MrFox Styles</a
+									>
+									<a
+										href="https://www.google.com/maps/place/Университет+Вистула/@52.1552796,21.0356324,14z/data=!4m6!3m5!1s0x4719328f89315b6d:0x56321377b41fea8!8m2!3d52.1588131!4d21.0343467!16s%2Fm%2F0c40fx1"
+										class="item-getintouch__email"
+										target="_blank"
+										>Warsaw, Stokłosy 3</a
+									>
+								</div>
+								<a
+									href="https://www.google.com/maps/place/Университет+Вистула/@52.1552796,21.0356324,14z/data=!4m6!3m5!1s0x4719328f89315b6d:0x56321377b41fea8!8m2!3d52.1588131!4d21.0343467!16s%2Fm%2F0c40fx1"
+									class="item-getintouch__button"
+									target="_blank"
+									>Znajdź nas</a
+								>
+							</div>
+							<div class="getintouch__item item-getintouch">
+								<div class="item-getintouch__icon">
+									<img src="img/inTouch/mail.svg" alt="chat" />
+								</div>
+								<div class="item-getintouch__emails">
+									<a
+										href="mailto:atynnyi1@stu.vistula.edu.pl"
+										class="item-getintouch__email"
+										target="_blank"
+										>atynnyi1@stu.vistula.edu.pl</a
+									>
+									<a
+										href="mailto:andreytinniy@gmail.com"
+										class="item-getintouch__email"
+										target="_blank"
+										>andreytinniy@gmail.com</a
+									>
+								</div>
+								<a
+									href="mailto:atynnyi1@stu.vistula.edu.pl"
+									class="item-getintouch__button"
+									target="_blank"
+									>Napisz mail</a
+								>
+							</div>
+						</div>
+						<div class="getintouch__map">
+							<iframe
+								id="getintouch__map"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.6531985431648!2d21.032158015943118!3d52.15881637068513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4719328f89315b6d%3A0x56321377b41fea8!2sVistula%20University!5e0!3m2!1sen!2sby!4v1635510852489!5m2!1sen!2sby"
+								width="600"
+								height="400"
+								frameborder="0"
+								style="
+									border: 1px solid;
+									border-radius: 10px;
+									width: 65%;
+									align-items: center;
+									justify-content: center;
+									margin: 50px 0px 0px 17.5%;
+								"
+								allowfullscreen
+							></iframe>
+						</div>
+						<!-- </div> -->
+					</div>
+				</section>
+			</main>
+			<%- include('./partials/footer.ejs') %>
+		</div>
+		<!-- Подключаем jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="slick/slick.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- Подключаем скрипты -->
+		<script src="js/script.js"></script>
+		<script src="js/scriptshop.js"></script>
+		<script src="js/shopitem.js"></script>
+		<script src="js/review.js"></script>
+	</body>
+</html>

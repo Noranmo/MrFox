@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<title>MrFox Styles | Login</title>
+		<!-- icon -->
+		<link
+			rel="icon"
+			href="../img/header/favicon.ico"
+			type="image/x-icon"
+			sizes="32x32"
+		/>
+	</head>
+
+	<body style="background-color: #e3e6f3">
+		<!-- Lorem ipsum
+		! Lorem ipsum coloe
+		TODO You should to something shift + alt + t -- Translate text
+		? Lorem ipsum bla albal labla ===== cmd + alt + 9 eCSStractor
+	-->
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container _container">
+					<div class="header__body">
+						<div class="header__logo">
+							MrFox Styles
+							<img class="logo__svg" src="../img/header/fox_logo.svg" />
+						</div>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li class="header__item">
+									<a href="/index.html" class="header__link">HOME</a>
+								</li>
+								<li class="header__item">
+									<a href="/product.html" class="header__link">SKLEP</a>
+								</li>
+								<li class="header__item">
+									<a href="/firma.html" class="header__link">MRFOX</a>
+								</li>
+								<li class="header__item">
+									<a href="/contact.html" class="header__link">CONTACT</a>
+								</li>
+								<li class="header__item">
+									<a href="/firma.html#qna" class="header__link">FAQ</a>
+								</li>
+								<li class="header__item">
+									<button type="button" class="header__link btnLogin-popup">
+										<img
+											class="menu__svg menu__svg_log"
+											src="img/header/user1.svg"
+										/>
+									</button>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="mainPage">
+				<section class="mainPage__loginForm loginForm">
+					<div class="loginForm__container _container">
+						<div class="loginForm__body">
+							<span class="icon-close">
+								<ion-icon name="close"></ion-icon>
+							</span>
+							<div class="form-box login">
+								<h2>Zaloguj sie</h2>
+								<form action="/login" method="post">
+									<div class="input-box">
+										<span class="icon"><ion-icon name="mail"></ion-icon></span>
+										<input name="email" type="email" required />
+										<label>Email</label>
+									</div>
+									<div class="input-box">
+										<span class="icon"
+											><ion-icon name="lock-closed"></ion-icon
+										></span>
+										<input name="password" type="password" required />
+										<label>Hasło</label>
+									</div>
+									<div class="remember-forgot">
+										<label><input type="checkbox" />Zapamiętaj mnie</label>
+										<a href="#">Zapomniałeś hasła?</a>
+									</div>
+									<button type="submit" class="btn">Zaloguj sie</button>
+									<div class="login-register">
+										<p>
+											Nie masz konta?<a
+												onclick="location.href= 'http://localhost:4500/register'"
+												class="register-link"
+												>Rejestr</a
+											>
+										</p>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<!-- Подключаем jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="slick/slick.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- Подключаем скрипты -->
+		<script src="../js/script.js"></script>
+		<script src="../js/scriptshop.js"></script>
+		<script src="../js/shopitem.js"></script>
+		<script src="../js/review.js"></script>
+	</body>
+</html>

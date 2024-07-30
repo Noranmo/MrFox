@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+		<title>MrFox Styles | <%= title %></title>
+		<!-- icon -->
+		<link
+			rel="icon"
+			href="../img/header/favicon.ico"
+			type="image/x-icon"
+			sizes="32x32"
+		/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<%- include('./partials/header.ejs') %>
+			<main class="mainPage">
+				<section class="mainPage__card card">
+					<div class="card__container">
+						<div class="card__title">Koszyk</div>
+						<div class="card__numberItem">
+							<span class="quantityBag">0</span>
+							produkty/-ow
+						</div>
+						<div class="card__subtitle">Dodano do koszyka</div>
+						<div class="card__body">
+							<div class="card__items">
+								<ul class="card__list"></ul>
+							</div>
+							<div class="card__total">
+								<div class="card__totalPrice">
+									<span>Suma:</span>
+									<span class="suma">0 zl</span>
+								</div>
+								<div class="card__buttons">
+									<button class="close-bag" type="button">
+										Kontynuuj Zakupy
+									</button>
+									<button class="review-order" type="button">
+										Zobacz Zawartos Koszyka
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="mainPage__review review">
+					<div class="review__container _container">
+						<div class="review__back">
+							<span class="review__icon"
+								><ion-icon name="arrow-back-outline"></ion-icon
+							></span>
+							<a href="../product.html" class="review__backLink"
+								>Powrot do zakupow</a
+							>
+						</div>
+						<div class="review__title">KOSZYK</div>
+						<div class="review__section1">
+							<div class="review__koszyk koszyk">
+								<div class="koszyk__title">Twoje Przedmioty</div>
+								<div class="koszyk__subtitles">
+									<div class="koszyk__subtitle subtitle_1">Product</div>
+									<div class="koszyk__subtitle subtitle_2">Liczba</div>
+									<div class="koszyk__subtitle subtitle_3">Cena</div>
+								</div>
+								<div class="koszyk__items"></div>
+							</div>
+							<div class="review__podsumowanie podsumowanie">
+								<div class="podsumowanie__title">Podsumowanie</div>
+								<div class="podsumowanie__koszt">
+									<div class="podsumowanie__kosztTitle">Suma towaru:</div>
+									<div class="podsumowanie__kosztSuma">300 zl</div>
+								</div>
+								<div class="podsumowanie__dostawa">
+									<div class="podsumowanie__details">
+										<div class="podsumowanie__dostawaTitle">Koszt dostawy:</div>
+										<div class="podsumowanie__dostawaSuma">Bezplatnie</div>
+									</div>
+									<div class="podsumowanie__remark">
+										Z okazji otwarcia sklepu sklep płaci za dostawę
+									</div>
+								</div>
+								<div class="podsumowanie__suma">
+									<div class="podsumowanie__sumaTitle">Suma:</div>
+									<div class="podsumowanie__sumaSuma">300</div>
+								</div>
+								<div class="podsumowanie__quantity">
+									<div class="podsumowanie__quantityTitle">
+										Całkowita ilość:
+									</div>
+									<div class="podsumowanie__quantitySuma">0</div>
+								</div>
+							</div>
+						</div>
+						<div class="review__section2">
+							<div class="review__checkout checkout">
+								<div class="checkout__title">WYMELDOWANIE</div>
+								<div class="checkout__box">
+									<form action="/review" method="post">
+										<div class="checkout__input">
+											<input name="username" type="text" required />
+											<label>Username</label>
+										</div>
+										<div class="checkout__input">
+											<input name="email" type="email" required />
+											<label>Email</label>
+										</div>
+										<div class="checkout__cityCode">
+											<div class="checkout__input">
+												<input name="city" type="text" required />
+												<label>Miasto</label>
+											</div>
+											<div class="checkout__input">
+												<input name="zip" type="number" required />
+												<label>Zip Kod</label>
+											</div>
+										</div>
+										<div class="checkout__cityCode">
+											<div class="checkout__input quantity__checkout">
+												<input id="quantity" name="quantity" type="number" />
+												<label>Ilość</label>
+											</div>
+											<div class="checkout__input suma__checkout">
+												<input id="suma" name="suma" type="number" />
+												<label>Suma</label>
+											</div>
+										</div>
+										<button
+											type="submit"
+											class="platnosz__button"
+											onclick="RefreshUrl()"
+										>
+											Złożyc zamówienie
+										</button>
+										<!--<input type="submit" />-->
+									</form>
+								</div>
+							</div>
+							<div class="review__platnosz platnosz">
+								<div class="platnosz__title">PŁATNOŚĆ</div>
+								<div class="platnosz__box">
+									<div class="platnosz__subtitle">Akceptowana karta</div>
+									<div class="platnosz__cards">
+										<img src="../img/review/master.svg" alt="Mastercard" />
+										<img src="../img/review/visa.svg" alt="Visa" />
+										<img src="../img/review/maestro.svg" alt="Maestro" />
+									</div>
+									<form>
+										<div class="platnosz__input">
+											<input type="password" required />
+											<label>Numer karty kredytowej</label>
+										</div>
+										<div class="checkout__input">
+											<input type="text" required />
+											<label>Adres</label>
+										</div>
+										<div class="platnosz__cityCode">
+											<div class="platnosz__input">
+												<input type="number" required />
+												<label>Termin ważności</label>
+											</div>
+											<div class="platnosz__input">
+												<input type="number" required />
+												<label>CVV</label>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<%- include('./partials/footer.ejs') %>
+		</div>
+		<!-- Подключаем jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="../slick/slick.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- Подключаем скрипты -->
+		<script src="../js/script.js"></script>
+		<script src="../js/scriptshop.js"></script>
+		<script src="../js/shopitem.js"></script>
+		<script src="../js/review.js"></script>
+		<script>
+			function RefreshUrl() {
+				let listCart = []
+				//get data from cookie
+
+				function checkCart() {
+					let cookieValue = document.cookie
+						.split('; ')
+						.find(row => row.startsWith('listCart='))
+					if (cookieValue) {
+						listCart = JSON.parse(cookieValue.split('=')[1])
+					}
+					let timeSave = 'expires=Thu, 01 Jan 1970 00:00:00 GMT'
+					cookieValue =
+						'listCart=' +
+						JSON.stringify(listCart) +
+						'; ' +
+						timeSave +
+						'; path=/;'
+				}
+
+				checkCart()
+				document.cookie = 'listCart='
+			}
+		</script>
+	</body>
+</html>

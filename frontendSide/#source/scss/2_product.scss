@@ -1,0 +1,284 @@
+//----------Main Page part
+.productGall {
+	&__container {
+	}
+
+	&__rawbest {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0px 10px 0px;
+	}
+
+	&__item {
+		flex: 0 1 33.333%;
+	}
+
+	&__also {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0px 10px 0px;
+	}
+
+	&__section {
+		flex: 0 1 50%;
+	}
+}
+.also__title {
+	margin: 100px 0px 20px !important;
+}
+.item-productGall {
+	&__image {
+	}
+	&__image img {
+		width: 315px;
+		height: 400px;
+		object-fit: cover;
+	}
+
+	&__info {
+	}
+
+	&__text {
+		font-size: 18px;
+		padding: 15px 0px 15px;
+	}
+
+	&__title {
+	}
+
+	&__price {
+		padding: 15px 0px 0px;
+		color: grey;
+	}
+
+	&__button {
+		font-size: 18px;
+		border-radius: 37px;
+		display: flex;
+		min-height: 36px;
+		max-width: 150px;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 0.2px;
+		text-align: center;
+		font-weight: bold;
+		line-height: 150%;
+		padding: 5px 10px;
+		margin: 10px 0px;
+		transition: all 0.3s ease 0s;
+		background: #ff7b47;
+		color: #fff;
+		margin: 0px 0px 30px;
+		box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+			rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+			rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	}
+	&__button:hover {
+		background-color: #fff;
+		border: 1px solid #ff7b47;
+		color: #ff7b47;
+	}
+}
+.section-productGall {
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 50px;
+	position: relative;
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	text-align: center;
+
+	&__iamge img {
+		width: 475px;
+		height: 400px;
+		object-fit: cover;
+	}
+	&__iamge img:hover {
+	}
+
+	&__description {
+		font-size: 40px;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		color: #d93e00;
+		font-weight: bold;
+		display: flex;
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transition: 0.6s;
+	}
+	&__description:hover {
+		opacity: 1;
+	}
+
+	&__description {
+		transform: translateY(40px);
+		transition: 0.6s;
+	}
+	&__description:hover {
+		transform: translateY(0px);
+	}
+
+	.section-productGall__iamge:hover {
+		transform: scale(1.1);
+		opacity: 0.8;
+		transition: 0.6s;
+	}
+}
+
+@media (max-width: 992px) {
+	.item-productGall__image img {
+		width: 275px;
+		height: 350px;
+		object-fit: cover;
+	}
+	.section-productGall__iamge img {
+		width: 425px;
+		height: 350px;
+	}
+}
+@media (max-width: 878px) {
+	.item-productGall__iamge img {
+		width: 225px;
+		height: 300px;
+		object-fit: cover;
+	}
+	.productGall__also {
+		flex-direction: column;
+	}
+}
+@media (max-width: 713px) {
+	.item-productGall__image img {
+		width: 200px;
+		height: 275px;
+		object-fit: cover;
+	}
+}
+@media (max-width: 664px) {
+	.item-productGall {
+		margin: 0px 15px 0px 0px;
+	}
+}
+@media (max-width: 448px) {
+	.section-productGall__iamge img {
+		width: 375px;
+		height: 300px;
+	}
+}
+
+//----------Sklep part
+
+#item__collection {
+	display: none;
+}
+
+.mainPage {
+	&__shop {
+	}
+}
+.shop {
+	margin: 40px 0px 0px;
+	&__container {
+		max-width: 1070px;
+		padding: 0px 5px;
+		margin: 0 auto;
+	}
+
+	&__rawbest {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0px 10px 0px;
+	}
+
+	&__item {
+		flex: 0 1 25%;
+	}
+}
+.shop:nth-child(1) {
+	margin: 100px 0px 0px;
+}
+.about {
+	&__title {
+	}
+}
+.title {
+}
+.top {
+	&__title {
+		margin: 20px 0px 5px !important;
+	}
+}
+.item-shop {
+	&__image {
+		margin: 0px 10px 0px 0px;
+	}
+
+	&__image img {
+		width: 243px;
+		height: 243px;
+		object-fit: cover;
+		border-radius: 10px;
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+			rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	}
+
+	&__info {
+	}
+
+	&__text {
+		font-size: 18px;
+		padding: 15px 0px 15px;
+		font-weight: 800;
+	}
+
+	&__title {
+	}
+
+	&__price {
+		padding: 25px 0px 0px;
+		color: grey;
+	}
+
+	&__button {
+		font-size: 15px;
+		border-radius: 37px;
+		display: flex;
+		min-height: 35px;
+		min-width: 100px;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 0.2px;
+		text-align: center;
+		font-weight: bold;
+		line-height: 150%;
+		padding: 5px 15px;
+		margin: 10px 0px;
+		transition: all 0.3s ease 0s;
+		background: #ff7b47;
+		color: #fff;
+		margin: 0px 0px 50px;
+		box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+			rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+			rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	}
+	&__button:hover {
+		background-color: #fff;
+		border: 1px solid #ff7b47;
+		color: #ff7b47;
+	}
+
+	&__image img {
+		transform: translateY(40px);
+		transition: 0.6s;
+	}
+	&__image:hover img {
+		transform: translateY(0px);
+		transform: scale(0.98);
+		border: 1px solid #ff7b47;
+	}
+}

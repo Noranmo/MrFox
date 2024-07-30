@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+		<title>MrFox Styles</title>
+		<!-- icon -->
+		<link
+			rel="icon"
+			href="../img/header/favicon.ico"
+			type="image/x-icon"
+			sizes="32x32"
+		/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<%- include('./partials/header.ejs') %>
+			<main class="mainPage">
+				<section class="mainPage__card card">
+					<div class="card__container">
+						<div class="card__title">Koszyk</div>
+						<div class="card__numberItem">
+							<span class="total_number">4</span>
+							produkty/-ow
+						</div>
+						<div class="card__subtitle">Dodano do koszyka</div>
+						<div class="card__body">
+							<div class="card__items">
+								<ul class="card__list"></ul>
+							</div>
+							<div class="card__total">
+								<div class="card__totalPrice">
+									<span class="suma">Suma:</span>
+									<span>0 zl</span>
+								</div>
+								<div class="card__buttons">
+									<button class="close-bag" type="button">
+										Kontynuuj Zakupy
+									</button>
+									<button
+										onclick="location.href='review'"
+										class="review-order"
+										type="button"
+									>
+										Zobacz Zawartos Koszyka
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="mainPage__thank thank">
+					<div class="thank__container _container">
+						<div class="thank__letter">
+							<div class="header__logo">
+								<img class="logo__svg" src="../img/header/fox_logo.svg" />
+							</div>
+							<div class="thank__details">
+								<h1>Dziękuję za zamówienie!</h1>
+								<h2>Mamy nadzieję, że podoba ci się nasz sklep MrFox!</h2>
+							</div>
+						</div>
+						<button
+							onclick="location.href='http://localhost:4500/'"
+							class="thank__button"
+						>
+							Wrócić do HOME
+						</button>
+					</div>
+				</section>
+			</main>
+			<%- include('./partials/footer.ejs') %>
+		</div>
+		<!-- Подключаем jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="../slick/slick.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- Подключаем скрипты -->
+		<script src="../js/script.js"></script>
+		<script src="../js/scriptshop.js"></script>
+		<script src="../js/shopitem.js"></script>
+		<script src="../js/review.js"></script>
+		<script src="../js/thank.js"></script>
+	</body>
+</html>

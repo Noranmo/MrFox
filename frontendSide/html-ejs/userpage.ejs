@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+		<title>MrFox Styles | <%= title %></title>
+		<!-- icon -->
+		<link
+			rel="icon"
+			href="../img/header/favicon.ico"
+			type="image/x-icon"
+			sizes="32x32"
+		/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container _container">
+					<div class="header__body">
+						<div class="header__logo">
+							MrFox Styles
+							<img class="logo__svg" src="img/header/fox_logo.svg" />
+						</div>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li class="header__item">
+									<a href="" class="header__link"
+										>Witaj, <%= queryUsername %></a
+									>
+								</li>
+								<li class="header__item">
+									<button
+										onclick="location.href='http://localhost:4500/'"
+										type="button"
+										class="header__link btnLogin-popup"
+									>
+										<img
+											class="menu__svg menu__svg_log menu__svg_home"
+											src="../img/header/icon_home.svg"
+										/>
+									</button>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="mainPage">
+				<section class="mainPage__user user">
+					<div class="user _container">
+						<div class="user__infoInfo">
+							<div class="user__info">
+								<div class="user__icon">
+									<img src="../img/userpage/userpage.svg" alt="" />
+								</div>
+								<div class="user__infodetails infodetails">
+									<% if (user.length) { %> <% user.forEach(({ username, email,
+									password, createdAt}) => { %>
+									<div class="infodetails__name _infodetails">
+										<%= username %>
+									</div>
+									<div class="infodetails__surname _infodetails">
+										<%= email %>
+									</div>
+									<div class="infodetails__email _infodetails">
+										<%= password %>
+									</div>
+									<div class="infodetails__country _infodetails">
+										<%= createdAt.toLocaleDateString() %>
+									</div>
+									<% }) %><% } %>
+								</div>
+							</div>
+							<div class="user__buttons">
+								<button
+									onclick="location.href = 'http://localhost:4500/'"
+									class="user__out"
+								>
+									Wyloguj
+								</button>
+								<button
+									onclick="location.href = 'http://localhost:4500/product'"
+									class="user__shopping"
+								>
+									Zakupy
+								</button>
+							</div>
+						</div>
+						<div class="user__history">
+							<div class="user__title">Historia</div>
+							<div class="user__sections">
+								<div class="user__section">Data</div>
+								<div class="user__section">Miasto</div>
+								<div class="user__section">Ilość</div>
+								<div class="user__section">Suma</div>
+							</div>
+							<div class="user__contents">
+								<% if (history.length) { %> <% history.forEach(({ username,
+								email, city, quantity, suma, createdAt }) => { %>
+								<div class="admin__content content">
+									<div class="content__date">
+										<%= createdAt.toLocaleDateString() %>
+									</div>
+									<div class="content__city"><%= city %></div>
+									<div class="content__quantity sumaQuantit">
+										<%= quantity %>
+									</div>
+									<div class="content__suma sumaAdmi"><%= suma %> zl</div>
+								</div>
+								<% }) %> <% } %>
+							</div>
+						</div>
+						<div class="user__total total">
+							<div class="total__money">
+								<div class="total__label">Całkowite wydatki:</div>
+								<div class="total__number total__intnumber">2000</div>
+							</div>
+							<div class="total__transaction">
+								<div class="total__label">Całkowita transakcja:</div>
+								<div class="total__inttrans">4</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__top">
+					<div class="footer__maincont _container">
+						<div class="footer__body">
+							<div class="footer__row"></div>
+							<div class="footer__logo">
+								MrFox Styles
+								<img class="logo__svg" src="img/header/fox_logo.svg" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- Подключаем jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="../slick/slick.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- Подключаем скрипты -->
+		<script src="../js/script.js"></script>
+		<script src="../js/scriptshop.js"></script>
+		<script src="../js/shopitem.js"></script>
+		<script src="../js/review.js"></script>
+		<script src="../js/thank.js"></script>
+		<script>
+			function updateNumbers() {
+				let wydatki = document.querySelector('.total__intnumber')
+				let transakcja = document.querySelector('.total__inttrans')
+
+				let samaSales = 0
+				let samaQuantity = 0
+				// Sales
+				document.querySelectorAll('.sumaAdmi').forEach(el => {
+					let NEwSuma = el.textContent
+					let intNewSuma = parseInt(NEwSuma)
+					//console.log(intNewSuma)
+					//console.log(typeof intNewSuma)
+
+					samaSales = samaSales + intNewSuma
+					//console.log(samaSales)
+				})
+
+				//Products
+				document.querySelectorAll('.sumaQuantit').forEach(el => {
+					let NEwQunatity = el.textContent
+					let intNewQunatity = parseInt(NEwQunatity)
+					console.log(intNewQunatity)
+					console.log(typeof intNewQunatity)
+
+					samaQuantity = samaQuantity + intNewQunatity
+					console.log(samaQuantity)
+				})
+
+				wydatki.innerHTML = samaSales + ' zl'
+				transakcja.innerHTML = samaQuantity
+			}
+			updateNumbers()
+		</script>
+	</body>
+</html>

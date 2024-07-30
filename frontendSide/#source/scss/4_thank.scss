@@ -1,0 +1,49 @@
+.mainPage {
+	&__thank {
+		margin: 250px 0px 0px 0px;
+		display: flex;
+	}
+}
+.thank {
+	&__letter {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__details {
+		font-size: 28px;
+		line-height: 35px;
+	}
+
+	&__button {
+		font-size: 18px;
+		border-radius: 37px;
+		display: flex;
+		min-height: 40px;
+		max-width: 40%;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 0.2px;
+		text-align: center;
+		font-weight: bold;
+		line-height: 150%;
+		padding: 5px 10px;
+		margin: 40px 0px;
+		transition: all 0.3s ease 0s;
+		background: #ff7b47;
+		color: #fff;
+	}
+	&__button:hover {
+		background-color: #fff;
+		border: 1px solid #ff7b47;
+		color: #ff7b47;
+	}
+}
+
+.logo {
+	&__svg {
+		width: 55px !important;
+		height: 55px !important;
+	}
+}

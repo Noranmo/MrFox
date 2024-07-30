@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+		<link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+		<title>MrFox Styles | <%= title %></title>
+		<!-- icon -->
+		<link
+			rel="icon"
+			href="../img/header/favicon.ico"
+			type="image/x-icon"
+			sizes="32x32"
+		/>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__container _container">
+					<div class="header__body">
+						<div class="header__logo">
+							MrFox Styles
+							<img class="logo__svg" src="img/header/fox_logo.svg" />
+						</div>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li class="header__item">
+									<a href="" class="header__link"
+										>Pozdrawiam, <%= queryUsername %></a
+									>
+								</li>
+								<li class="header__item">
+									<button
+										onclick="location.href='http://localhost:4500/'"
+										type="button"
+										class="header__link btnLogin-popup"
+									>
+										<img
+											class="menu__svg menu__svg_log menu__svg_home"
+											src="../img/header/icon_home.svg"
+										/>
+									</button>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
+			<main class="mainPage">
+				<section class="mainPage__admin admin">
+					<div class="admin__container _container">
+						<div class="admin__tabs">
+							<a href="#section1" class="admin__tabsItem">Ogólny</a>
+							<a href="#section2" class="admin__tabsItem">Zamówienia</a>
+							<a href="#section3" class="admin__tabsItem">Użytkownicy</a>
+						</div>
+						<div class="admin__tabsbody">
+							<div id="section1" class="admin__tabsblock">
+								<div class="general__title">Informacje ogólne</div>
+								<div class="general__blocks">
+									<div class="general__block">
+										<div class="general__icon">
+											<img src="../img/admin/sales.svg" alt="" />
+										</div>
+										<div class="general__info">
+											<div class="general__blocktitle">Sprzedaż</div>
+											<div class="general__blockint info__sales">20</div>
+										</div>
+									</div>
+									<div class="general__block">
+										<div class="general__icon">
+											<img src="../img/admin/orders.svg" alt="" />
+										</div>
+										<div class="general__info">
+											<div class="general__blocktitle">Liczba zamówień</div>
+											<div class="general__blockint info__orders">10</div>
+										</div>
+									</div>
+									<div class="general__block">
+										<div class="general__icon">
+											<img src="../img/admin/products.svg" alt="" />
+										</div>
+										<div class="general__info">
+											<div class="general__blocktitle">
+												Liczba zakupionych produktów
+											</div>
+											<div class="general__blockint info__products">30</div>
+										</div>
+									</div>
+								</div>
+								<div class="admin__history">
+									<div class="admin__title">Historia</div>
+									<div class="admin__sections">
+										<div class="admin__section">Username</div>
+										<div class="admin__section">Data</div>
+										<div class="admin__section">Miasto</div>
+										<div class="admin__section">Ilość</div>
+										<div class="admin__section">Suma</div>
+									</div>
+									<div class="admin__contents">
+										<% if (histories.length) { %> <% histories.forEach(({
+										username, email, city, quantity, suma, createdAt }) => { %>
+										<div class="admin__content content countAdmin">
+											<div class="content__date"><%= username %></div>
+											<div class="content__date">
+												<%= createdAt.toLocaleDateString() %>
+											</div>
+
+											<div class="content__city"><%= city %></div>
+											<div class="content__quantity quantityAdmin">
+												<%= quantity %>
+											</div>
+											<div class="content__suma sumaAdmin"><%= suma %> zl</div>
+										</div>
+										<% }) %> <% } %>
+									</div>
+								</div>
+							</div>
+							<div id="section2" class="admin__tabsblock">
+								<div class="admin__history orders__history">
+									<div class="admin__title">Historia</div>
+									<div class="admin__sections">
+										<div class="admin__section">Username</div>
+										<div class="admin__section">Data</div>
+										<div class="admin__section">Miasto</div>
+										<div class="admin__section">Ilość</div>
+										<div class="admin__section">Suma</div>
+									</div>
+									<div class="admin__contents">
+										<% if (histories.length) { %> <% histories.forEach(({
+										username, email, city, quantity, suma, createdAt }) => { %>
+										<div class="admin__content content">
+											<div class="content__date"><%= username %></div>
+											<div class="content__date">
+												<%= createdAt.toLocaleDateString() %>
+											</div>
+											<div class="content__city"><%= city %></div>
+											<div class="content__quantity"><%= quantity %></div>
+											<div class="content__suma"><%= suma %> zl</div>
+										</div>
+										<% }) %> <% } %>
+									</div>
+								</div>
+							</div>
+							<div id="section3" class="admin__tabsblock">
+								<div class="users__history">
+									<div class="users__title">
+										Wszyscy zarejestrowani użytkownicy
+									</div>
+									<div class="users__sections admin__sections">
+										<div class="admin__section">Obraz</div>
+										<div class="admin__section">Username</div>
+										<div class="admin__section">Email</div>
+										<div class="admin__section">Hasło</div>
+										<div class="admin__section">Data rejestracji</div>
+									</div>
+									<div class="users__section">
+										<% if (users.length) { %> <% users.forEach(({ username,
+										email, password, createdAt }) => { %>
+										<div class="users__body body-users">
+											<div class="body-users__image">
+												<img src="../img/header/user_active.svg" alt="" />
+											</div>
+											<div class="body-users__username"><%= username %></div>
+											<div class="body-users__email"><%= email %></div>
+											<div class="body-users__password"><%= password %></div>
+											<div class="body-users__date">
+												<%= createdAt.toLocaleDateString() %>
+											</div>
+										</div>
+										<% }) %> <% } %>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__top">
+					<div class="footer__maincont _container">
+						<div class="footer__body">
+							<div class="footer__row"></div>
+							<div class="footer__logo">
+								MrFox Styles
+								<img class="logo__svg" src="img/header/fox_logo.svg" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- Подключаем jquery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="../slick/slick.min.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+		></script>
+		<!-- Подключаем скрипты -->
+		<script src="../js/script.js"></script>
+		<script src="../js/scriptshop.js"></script>
+		<script src="../js/shopitem.js"></script>
+		<script src="../js/review.js"></script>
+		<script src="../js/thank.js"></script>
+		<script src="../js/admin.js"></script>
+		<script>
+			function updateNumbers() {
+				let sales = document.querySelector('.info__sales')
+				let orders = document.querySelector('.info__orders')
+				let products = document.querySelector('.info__products')
+				let samaSales = 0
+				let samaQuantity = 0
+				let samaOrders = 0
+				// Sales
+				document.querySelectorAll('.sumaAdmin').forEach(el => {
+					let NEwSuma = el.textContent
+					let intNewSuma = parseInt(NEwSuma)
+					//console.log(intNewSuma)
+					//console.log(typeof intNewSuma)
+
+					samaSales = samaSales + intNewSuma
+					//console.log(samaSales)
+				})
+				// Orders
+				let ord = document.querySelectorAll('.countAdmin').length
+
+				//let intNewSuma = parseInt(NEwSuma)
+				console.log(ord + 'I am the order count')
+
+				samaOrders = ord
+
+				//Products
+				document.querySelectorAll('.quantityAdmin').forEach(el => {
+					let NEwQunatity = el.textContent
+					let intNewQunatity = parseInt(NEwQunatity)
+					console.log(intNewQunatity)
+					console.log(typeof intNewQunatity)
+
+					samaQuantity = samaQuantity + intNewQunatity
+					console.log(samaQuantity)
+				})
+
+				sales.innerHTML = samaSales + ' zl'
+				orders.innerHTML = samaOrders
+				products.innerHTML = samaQuantity
+			}
+			updateNumbers()
+		</script>
+	</body>
+</html>

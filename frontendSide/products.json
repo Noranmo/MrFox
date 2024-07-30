@@ -1,0 +1,114 @@
+[
+	{
+		"id": 1,
+		"name": "SHIRT 1",
+		"image": "f1.jpg",
+		"price": 220,
+		"collection": "Best Collection",
+		"description": "T-shirt będący częścią naszej „Najlepszej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 2,
+		"name": "SHIRT 2",
+		"image": "f3.jpg",
+		"price": 300,
+		"collection": "Best Collection",
+		"description": "T-shirt będący częścią naszej „Najlepszej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 3,
+		"name": "SHIRT 3",
+		"image": "f5.jpg",
+		"price": 500,
+		"collection": "Best Collection",
+		"description": "T-shirt będący częścią naszej „Najlepszej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 4,
+		"name": "SHIRT 4",
+		"image": "n4.jpg",
+		"price": 240,
+		"collection": "Best Collection",
+		"description": "T-shirt będący częścią naszej „Najlepszej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 5,
+		"name": "SHIRT 5",
+		"image": "a1.jpg",
+		"price": 350,
+		"collection": "Best Collection",
+		"description": "T-shirt będący częścią naszej „Najlepszej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 6,
+		"name": "SHIRT 6",
+		"image": "a2.jpg",
+		"price": 350,
+		"collection": "New Collection",
+		"description": "T-shirt będący częścią naszej „Nowej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 7,
+		"name": "SHIRT 7",
+		"image": "a3.jpg",
+		"price": 350,
+		"collection": "New Collection",
+		"description": "T-shirt będący częścią naszej „Nowej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 8,
+		"name": "SHIRT 8",
+		"image": "a4.jpg",
+		"price": 350,
+		"collection": "New Collection",
+		"description": "T-shirt będący częścią naszej „Nowej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 9,
+		"name": "SHIRT 9",
+		"image": "a5.jpg",
+		"price": 350,
+		"collection": "New Collection",
+		"description": "T-shirt będący częścią naszej „Nowej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 10,
+		"name": "SHIRT 10",
+		"image": "a6.jpg",
+		"price": 350,
+		"collection": "Old Collection",
+		"description": "T-shirt będący częścią naszej „Starej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 11,
+		"name": "SHIRT 11",
+		"image": "a7.jpg",
+		"price": 350,
+		"collection": "Old Collection",
+		"description": "T-shirt będący częścią naszej „Starej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 12,
+		"name": "SHIRT 12",
+		"image": "a8.jpg",
+		"price": 350,
+		"collection": "Old Collection",
+		"description": "T-shirt będący częścią naszej „Starej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 13,
+		"name": "SHIRT 13",
+		"image": "a9.jpg",
+		"price": 350,
+		"collection": "Old Collection",
+		"description": "T-shirt będący częścią naszej „Starej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	},
+	{
+		"id": 14,
+		"name": "SHIRT 14",
+		"image": "a10.jpg",
+		"price": 350,
+		"collection": "Old Collection",
+		"description": "T-shirt będący częścią naszej „Starej Kolekcji”. Jest wykonany z najlepszych materiałów i nadaje się dla Ciebie jako prezent lub do własnego użytku."
+	}
+]

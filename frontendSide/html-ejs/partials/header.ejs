@@ -1,0 +1,53 @@
+<header class="header">
+	<div class="header__container _container">
+		<div class="header__body">
+			<div class="header__logo">
+				MrFox Styles
+				<img class="logo__svg" src="img/header/fox_logo.svg" />
+			</div>
+			<div class="header__burger">
+				<span></span>
+			</div>
+			<nav class="header__menu">
+				<ul class="header__list">
+					<li class="header__item">
+						<a href="index.html" class="header__link">HOME</a>
+					</li>
+					<li class="header__item">
+						<a href="product.html" class="header__link">SKLEP</a>
+					</li>
+					<li class="header__item">
+						<a href="html/firma.html" class="header__link">MRFOX</a>
+					</li>
+					<li class="header__item">
+						<a href="contact.html" class="header__link">CONTACT</a>
+					</li>
+					<li class="header__item">
+						<a href="html/firma.html#qna" class="header__link">FAQ</a>
+					</li>
+					<li class="header__item">
+						<button
+							onclick="loginRegister()"
+							type="button"
+							class="header__link btnLogin-popup"
+						>
+							<img class="menu__svg menu__svg_log" src="img/header/user1.svg" />
+						</button>
+					</li>
+					<li class="header__item">
+						<button type="button" class="header__link bag-popup">
+							<img class="menu__svg menu__svg_bag" src="img/header/bag1.svg" />
+							<span class="quantity">0</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<script>
+	function loginRegister() {
+		location.href = 'http://localhost:4500/login'
+	}
+</script>
